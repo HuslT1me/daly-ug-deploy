@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Дали Юг | Карьера</title>
-    <script type="module" crossorigin src="./assets/main-wLRjV_5v.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-CSbIOUce.css">
+    <script type="module" crossorigin src="./assets/main-7DMWXWEc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-B3OzgFJf.css">
   </head>
   <body>
     <header class="header container">
@@ -46,13 +46,14 @@
             <a class="header__contacts-phone-link" href="tel:+78632278384"
               >+7 (863) 227-83-84</a
             >
-            <button
+           <button
               class="header__contacts-form-button button"
               type="button"
               aria-haspopup="dialog"
               aria-controls="myModal"
               aria-expanded="false"
               aria-label="Открыть форму обратной связи"
+              data-dialog-id="dialog-feedback"
               data-js-dialog-trigger
             >
               отправить запрос
@@ -65,7 +66,8 @@
               aria-controls="myModal"
               aria-expanded="false"
               aria-label="Открыть бургер меню"
-              data-js-dialog-trigger-burger
+              data-js-dialog-trigger
+              data-dialog-id="dialog-burger"
             >
               <div class="burger-menu__button-inner">
                 <span
@@ -78,7 +80,7 @@
                 </span>
               </div>
             </button>
-            <dialog class="burger-menu__content" data-js-dialog-burger>
+            <dialog class="burger-menu__content" id="dialog-burger">
               <ul class="burger-menu__content-list">
                 <li class="burger-menu__dropdown">
                   <details class="burger-menu__details">
@@ -268,7 +270,7 @@
       <section class="career" aria-labelledby="career-title">
         <img
           class="career__image"
-          srcset="./assets/images/career/1.webp 1x, ./assets/images/career/1-2x.webp 2x"
+          srcset="./assets/images/career/1.webp 1x, /assets/images/career/1-2x.webp 2x"
           alt=""
           loading="lazy"
         />
@@ -658,7 +660,12 @@
         </div>
       </div>
     </footer>
-    <dialog class="feedback" aria-labelledby="dialog-title" data-js-dialog>
+    <dialog
+      class="feedback"
+      aria-labelledby="dialog-title"
+      data-js-dialog
+      id="dialog-feedback"
+    >
       <h3 class="visually-hidden" id="dialog-title">
         Форма для отправки запроса
       </h3>

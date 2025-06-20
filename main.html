@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Дали Юг | Главная</title>
-    <script type="module" crossorigin src="./assets/main-wLRjV_5v.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-CSbIOUce.css">
+    <script type="module" crossorigin src="./assets/main-7DMWXWEc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-B3OzgFJf.css">
   </head>
   <body>
     <header class="header container">
@@ -53,6 +53,7 @@
               aria-controls="myModal"
               aria-expanded="false"
               aria-label="Открыть форму обратной связи"
+              data-dialog-id="dialog-feedback"
               data-js-dialog-trigger
             >
               отправить запрос
@@ -65,7 +66,8 @@
               aria-controls="myModal"
               aria-expanded="false"
               aria-label="Открыть бургер меню"
-              data-js-dialog-trigger-burger
+              data-js-dialog-trigger
+              data-dialog-id="dialog-burger"
             >
               <div class="burger-menu__button-inner">
                 <span
@@ -78,7 +80,7 @@
                 </span>
               </div>
             </button>
-            <dialog class="burger-menu__content" data-js-dialog-burger>
+            <dialog class="burger-menu__content" id="dialog-burger">
               <ul class="burger-menu__content-list">
                 <li class="burger-menu__dropdown">
                   <details class="burger-menu__details">
@@ -264,6 +266,7 @@
       </div>
     </header>
     <main class="main">
+
       <section class="promo container" aria-labelledby="promo-title">
         <div class="promo__inner">
           <div class="promo__main">
@@ -286,7 +289,7 @@
             <div class="promo__mobile-cover">
               <img
                 class="promo__mobile-cover-image"
-                srcset="./assets/images/promo/main-mobile.webp 1x, ./assets/images/promo/main-mobile-2x.webp 2x"
+                srcset="./assets/images/promo/main-mobile.webp 1x, /assets/images/promo/main-mobile-2x.webp 2x"
                 width="350"
                 height="411"
                 alt=""
@@ -352,7 +355,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/1.webp 1x, ./assets/images/catalog/1-2x.webp 2x"
+                      srcset="./assets/images/catalog/1.webp 1x, /assets/images/catalog/1-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -368,7 +371,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/2.webp 1x, ./assets/images/catalog/2-2x.webp 2x"
+                      srcset="./assets/images/catalog/2.webp 1x, /assets/images/catalog/2-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -384,7 +387,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/3.webp 1x, ./assets/images/catalog/3-2x.webp 2x"
+                      srcset="./assets/images/catalog/3.webp 1x, /assets/images/catalog/3-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -400,7 +403,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/4.webp 1x, ./assets/images/catalog/4-2x.webp 2x"
+                      srcset="./assets/images/catalog/4.webp 1x, /assets/images/catalog/4-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -417,7 +420,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/1.webp 1x, ./assets/images/catalog/1-2x.webp 2x"
+                      srcset="./assets/images/catalog/1.webp 1x, /assets/images/catalog/1-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -433,7 +436,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/2.webp 1x, ./assets/images/catalog/2-2x.webp 2x"
+                      srcset="./assets/images/catalog/2.webp 1x, /assets/images/catalog/2-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -449,7 +452,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/3.webp 1x, ./assets/images/catalog/3-2x.webp 2x"
+                      srcset="./assets/images/catalog/3.webp 1x, /assets/images/catalog/3-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -465,7 +468,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/4.webp 1x, ./assets/images/catalog/4-2x.webp 2x"
+                      srcset="./assets/images/catalog/4.webp 1x, /assets/images/catalog/4-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -505,62 +508,92 @@
           </div>
         </div>
       </section>
+
       <section class="adversting" aria-labelledby="advertising-title">
+        <h3 class="visually-hidden">
+          Информация о взаимодействии с партнерами и сотрудничестве
+        </h3>
         <div class="container">
-          <div class="adversting__inner">
-            <h3 class="visually-hidden">
-              Информация о взаимодействии с партнерами и сотрудничестве
-            </h3>
-            <div class="adversting__image-wrapper">
-              <img
-                class="adversting__image"
-                srcset="./assets/images/adversting/1.webp 1x, ./assets/images/adversting/1-2x.webp 2x"
-                width="723"
-                height="650"
-                alt=""
-                loading="lazy"
-              />
-              <img
-                class="adversting__image"
-                srcset="./assets/images/adversting/2.webp 1x, ./assets/images/adversting/2-2x.webp 2x"
-                width="390"
-                height="650"
-                alt=""
-                loading="lazy"
-              />
-              <img
-                class="adversting__image"
-                srcset="./assets/images/adversting/3.webp 1x, ./assets/images/adversting/3-2x.webp 2x"
-                width="755"
-                height="650"
-                alt=""
-                loading="lazy"
-              />
+          <div class="adversting__information">
+            <a class="adversting__information-link" href="#"></a>
+            <h4 class="adversting__information-title h3">СТМ-производство</h4>
+            <div class="adversting__information-description">
+              <p>
+                Важной частью производственной стратегии компании является
+                выпуск и отгрузка продукции под маркой клиента.
+              </p>
+              <p>
+                Партнёры могут выбирать тираж, параметры и цветовую гамму
+                товара. Команда «Дали-Юг» поможет согласовать спецификации,
+                подобрать технологию, разработать упаковку и обеспечить
+                своевременные поставки.
+              </p>
             </div>
-            <div class="adversting__information">
-              <h4 class="adversting__information-title h3">СТМ-производство</h4>
-              <div class="adversting__information-description">
-                <p>
-                  Важной частью производственной стратегии компании является
-                  выпуск и отгрузка продукции под маркой клиента.
-                </p>
-                <p>
-                  Партнёры могут выбирать тираж, параметры и цветовую гамму
-                  товара. Команда «Дали-Юг» поможет согласовать спецификации,
-                  подобрать технологию, разработать упаковку и обеспечить
-                  своевременные поставки.
-                </p>
-              </div>
-              <span class="adversting___learn-more learn-more">
-                узнать больше
-                <svg class="icon icon--arrow-right" width="58" height="8">
-                  <use href="./assets/icons/sprite.svg#arrow-right"></use>
-                </svg>
-              </span>
+            <span class="adversting___learn-more learn-more">
+              узнать больше
+              <svg class="icon icon--arrow-right" width="58" height="8">
+                <use href="./assets/icons/sprite.svg#arrow-right"></use>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="adversting__inner">
+          <div
+            class="adversting__image-slider slider-adversting"
+            data-js-slider='{
+                "sliderParams": {
+                  "spaceBetween": 10,
+                  "slidesPerGroup": 1,
+                  "slidesPerView": "auto",
+                   "breakpoints": {
+                    "0": {
+                      "spaceBetween": 7
+                    },
+                    "481": {
+                      "spaceBetween": 10
+                    }
+                  }
+                }
+               }'
+          >
+            <div class="slider-adversting__swiper swiper" data-js-slider-swiper>
+              <ul class="slider-adversting__list swiper-wrapper">
+                <li class="slider-adversting__list-item swiper-slide">
+                  <img
+                    class="slider-adversting__image"
+                    srcset="./assets/images/adversting/1.webp 1x, /assets/images/adversting/1-2x.webp 2x"
+                    width="723"
+                    height="650"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+                <li class="slider-adversting__list-item swiper-slide">
+                  <img
+                    class="slider-adversting__image"
+                    srcset="./assets/images/adversting/2.webp 1x, /assets/images/adversting/2-2x.webp 2x"
+                    width="390"
+                    height="650"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+                <li class="slider-adversting__list-item swiper-slide">
+                  <img
+                    class="slider-adversting__image"
+                    srcset="./assets/images/adversting/3.webp 1x, /assets/images/adversting/3-2x.webp 2x"
+                    width="755"
+                    height="650"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
+
       <section class="about" aria-labelledby="about-title">
         <h3 class="visually-hidden" id="about-title">Блог о нашей компанией</h3>
         <header class="about__header">
@@ -592,7 +625,7 @@
           <div class="about__decor-block">
             <img
               class="about__truck"
-              srcset="./assets/images/about/truck.webp 1x, ./assets/images/about/truck-2x.webp 2x"
+              srcset="./assets/images/about/truck.webp 1x, /assets/images/about/truck-2x.webp 2x"
               width="763"
               height="398"
               alt=""
@@ -600,7 +633,7 @@
             />
             <img
               class="about__box"
-              srcset="./assets/images/about/box.webp 1x, ./assets/images/about/box-2x.webp 2x"
+              srcset="./assets/images/about/box.webp 1x, /assets/images/about/box-2x.webp 2x"
               width="947"
               height="559"
               alt=""
@@ -608,7 +641,7 @@
             />
             <img
               class="about__bg-cover"
-              srcset="./assets/images/about/mobile-bg.webp 1x, ./assets/images/about/mobile-bg-2x.webp 2x"
+              srcset="./assets/images/about/mobile-bg.webp 1x, /assets/images/about/mobile-bg-2x.webp 2x"
               width="596"
               height="351"
               alt=""
@@ -621,14 +654,25 @@
             <div class="about__article border-decor" role="article">
               <a class="about__article-link" href="#"></a>
               <h3 class="about__article-title h3">Производство</h3>
-              <video
-                class="about__article-video"
-                src="./assets/videos/production/1.mp4"
-                width="507"
-                height="285"
-                poster="./assets/videos/poster/1.webp"
-                controls
-              ></video>
+              <div class="about__article-video-wrapper">
+                <img
+                  class="about__article-video"
+                  width="507"
+                  height="285"
+                  src="./assets/videos/poster/1.webp"
+                  loading="lazy"
+                />
+                <button class="about__article-video-play-button">
+                  <img
+                    class="about__video-play-icon"
+                    src="./assets/icons/play-button.svg"
+                    width="115"
+                    height="115"
+                    alt=""
+                    loading="lazy"
+                  />
+                </button>
+              </div>
               <div class="about__article-description">
                 <p>
                   Производство «Дали-Юг» представлено следующими цехами: цех
@@ -691,7 +735,7 @@
         </h3>
         <div
           class="novelty__slider slider-novelty"
-          data-js-slider='{ 
+          data-js-slider='{
             "sliderParams": {
               "slidesPerView": 4,
               "spaceBetween": 10,
@@ -719,7 +763,7 @@
                   <a class="novelty-product__link" href="#"></a>
                   <img
                     class="novelty-product__cover"
-                    srcset="./assets/images/novelty/1.webp 1x, ./assets/images/novelty/1-2x.webp 2x"
+                    srcset="./assets/images/novelty/1.webp 1x, /assets/images/novelty/1-2x.webp 2x"
                     width="283"
                     height="240"
                     alt=""
@@ -738,7 +782,7 @@
                   <a class="novelty-product__link" href="#"></a>
                   <img
                     class="novelty-product__cover"
-                    srcset="./assets/images/novelty/2.webp 1x, ./assets/images/novelty/2-2x.webp 2x"
+                    srcset="./assets/images/novelty/2.webp 1x, /assets/images/novelty/2-2x.webp 2x"
                     width="283"
                     height="240"
                     alt=""
@@ -757,7 +801,7 @@
                   <a class="novelty-product__link" href="#"></a>
                   <img
                     class="novelty-product__cover"
-                    srcset="./assets/images/novelty/3.webp 1x, ./assets/images/novelty/3-2x.webp 2x"
+                    srcset="./assets/images/novelty/3.webp 1x, /assets/images/novelty/3-2x.webp 2x"
                     width="283"
                     height="240"
                     alt=""
@@ -776,7 +820,7 @@
                   <a class="novelty-product__link" href="#"></a>
                   <img
                     class="novelty-product__cover"
-                    srcset="./assets/images/novelty/4.webp 1x, ./assets/images/novelty/4-2x.webp 2x"
+                    srcset="./assets/images/novelty/4.webp 1x, /assets/images/novelty/4-2x.webp 2x"
                     width="283"
                     height="240"
                     alt=""
@@ -802,7 +846,7 @@
             <div class="news__main news-article">
               <img
                 class="news-article__cover"
-                srcset="./assets/images/news/cover.webp 1x, ./assets/images/news/cover-2x.webp 2x"
+                srcset="./assets/images/news/cover.webp 1x, /assets/images/news/cover-2x.webp 2x"
                 width="599"
                 height="463"
                 alt=""
@@ -916,7 +960,12 @@
         </div>
       </div>
     </footer>
-    <dialog class="feedback" aria-labelledby="dialog-title" data-js-dialog>
+    <dialog
+      class="feedback"
+      aria-labelledby="dialog-title"
+      data-js-dialog
+      id="dialog-feedback"
+    >
       <h3 class="visually-hidden" id="dialog-title">
         Форма для отправки запроса
       </h3>

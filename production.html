@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Дали Юг | Каталог</title>
-    <script type="module" crossorigin src="./assets/main-wLRjV_5v.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-CSbIOUce.css">
+    <script type="module" crossorigin src="./assets/main-7DMWXWEc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-B3OzgFJf.css">
   </head>
   <body>
     <header class="header container">
@@ -46,13 +46,14 @@
             <a class="header__contacts-phone-link" href="tel:+78632278384"
               >+7 (863) 227-83-84</a
             >
-            <button
+           <button
               class="header__contacts-form-button button"
               type="button"
               aria-haspopup="dialog"
               aria-controls="myModal"
               aria-expanded="false"
               aria-label="Открыть форму обратной связи"
+              data-dialog-id="dialog-feedback"
               data-js-dialog-trigger
             >
               отправить запрос
@@ -65,7 +66,8 @@
               aria-controls="myModal"
               aria-expanded="false"
               aria-label="Открыть бургер меню"
-              data-js-dialog-trigger-burger
+              data-js-dialog-trigger
+              data-dialog-id="dialog-burger"
             >
               <div class="burger-menu__button-inner">
                 <span
@@ -78,7 +80,7 @@
                 </span>
               </div>
             </button>
-            <dialog class="burger-menu__content" data-js-dialog-burger>
+            <dialog class="burger-menu__content" id="dialog-burger">
               <ul class="burger-menu__content-list">
                 <li class="burger-menu__dropdown">
                   <details class="burger-menu__details">
@@ -292,7 +294,7 @@
             </div>
             <img
               class="production__cover"
-              srcset="./assets/images/production/cover.webp 1x, ./assets/images/production/cover-2x.webp 2x"
+              srcset="./assets/images/production/cover.webp 1x, /assets/images/production/cover-2x.webp 2x"
               alt=""
               loading="lazy"
             />
@@ -346,7 +348,7 @@
                       <a class="slider-products__slide-link" href="#"></a>
                       <img
                         class="slider-products__slide-image"
-                        srcset="./assets/images/catalog/1.webp 1x, ./assets/images/catalog/1-2x.webp 2x"
+                        srcset="./assets/images/catalog/1.webp 1x, /assets/images/catalog/1-2x.webp 2x"
                         width="199"
                         height="212"
                         alt=""
@@ -364,7 +366,7 @@
                       <a class="slider-products__slide-link" href="#"></a>
                       <img
                         class="slider-products__slide-image"
-                        srcset="./assets/images/catalog/2.webp 1x, ./assets/images/catalog/2-2x.webp 2x"
+                        srcset="./assets/images/catalog/2.webp 1x, /assets/images/catalog/2-2x.webp 2x"
                         width="199"
                         height="212"
                         alt=""
@@ -382,7 +384,7 @@
                       <a class="slider-products__slide-link" href="#"></a>
                       <img
                         class="slider-products__slide-image"
-                        srcset="./assets/images/catalog/3.webp 1x, ./assets/images/catalog/3-2x.webp 2x"
+                        srcset="./assets/images/catalog/3.webp 1x, /assets/images/catalog/3-2x.webp 2x"
                         width="199"
                         height="212"
                         alt=""
@@ -400,7 +402,7 @@
                       <a class="slider-products__slide-link" href="#"></a>
                       <img
                         class="slider-products__slide-image"
-                        srcset="./assets/images/catalog/4.webp 1x, ./assets/images/catalog/4-2x.webp 2x"
+                        srcset="./assets/images/catalog/4.webp 1x, /assets/images/catalog/4-2x.webp 2x"
                         width="199"
                         height="212"
                         alt=""
@@ -419,7 +421,7 @@
                       <a class="slider-products__slide-link" href="#"></a>
                       <img
                         class="slider-products__slide-image"
-                        srcset="./assets/images/catalog/1.webp 1x, ./assets/images/catalog/1-2x.webp 2x"
+                        srcset="./assets/images/catalog/1.webp 1x, /assets/images/catalog/1-2x.webp 2x"
                         width="199"
                         height="212"
                         alt=""
@@ -437,7 +439,7 @@
                       <a class="slider-products__slide-link" href="#"></a>
                       <img
                         class="slider-products__slide-image"
-                        srcset="./assets/images/catalog/2.webp 1x, ./assets/images/catalog/2-2x.webp 2x"
+                        srcset="./assets/images/catalog/2.webp 1x, /assets/images/catalog/2-2x.webp 2x"
                         width="199"
                         height="212"
                         alt=""
@@ -455,7 +457,7 @@
                       <a class="slider-products__slide-link" href="#"></a>
                       <img
                         class="slider-products__slide-image"
-                        srcset="./assets/images/catalog/3.webp 1x, ./assets/images/catalog/3-2x.webp 2x"
+                        srcset="./assets/images/catalog/3.webp 1x, /assets/images/catalog/3-2x.webp 2x"
                         width="199"
                         height="212"
                         alt=""
@@ -473,7 +475,7 @@
                       <a class="slider-products__slide-link" href="#"></a>
                       <img
                         class="slider-products__slide-image"
-                        srcset="./assets/images/catalog/4.webp 1x, ./assets/images/catalog/4-2x.webp 2x"
+                        srcset="./assets/images/catalog/4.webp 1x, /assets/images/catalog/4-2x.webp 2x"
                         width="199"
                         height="212"
                         alt=""
@@ -629,7 +631,12 @@
         </div>
       </div>
     </footer>
-    <dialog class="feedback" aria-labelledby="dialog-title" data-js-dialog>
+    <dialog
+      class="feedback"
+      aria-labelledby="dialog-title"
+      data-js-dialog
+      id="dialog-feedback"
+    >
       <h3 class="visually-hidden" id="dialog-title">
         Форма для отправки запроса
       </h3>

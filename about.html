@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Дали Юг | О компании</title>
-    <script type="module" crossorigin src="./assets/main-wLRjV_5v.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-CSbIOUce.css">
+    <script type="module" crossorigin src="./assets/main-7DMWXWEc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-B3OzgFJf.css">
   </head>
   <body>
     <header class="header container">
@@ -53,6 +53,7 @@
               aria-controls="myModal"
               aria-expanded="false"
               aria-label="Открыть форму обратной связи"
+              data-dialog-id="dialog-feedback"
               data-js-dialog-trigger
             >
               отправить запрос
@@ -65,7 +66,8 @@
               aria-controls="myModal"
               aria-expanded="false"
               aria-label="Открыть бургер меню"
-              data-js-dialog-trigger-burger
+              data-js-dialog-trigger
+              data-dialog-id="dialog-burger"
             >
               <div class="burger-menu__button-inner">
                 <span
@@ -78,7 +80,7 @@
                 </span>
               </div>
             </button>
-            <dialog class="burger-menu__content" data-js-dialog-burger>
+            <dialog class="burger-menu__content" id="dialog-burger">
               <ul class="burger-menu__content-list">
                 <li class="burger-menu__dropdown">
                   <details class="burger-menu__details">
@@ -290,22 +292,41 @@
             </div>
           </div>
           <div class="about-section__images">
-            <img
-              class="about-section__image"
-              srcset="./assets/images/about/about-section/1.webp 1x, ./assets/images/about/about-section/1-2x.webp 2x"
-              width="495"
-              height="775"
-              loading="lazy"
-              alt=""
-            />
-            <img
-              class="about-section__image"
-              srcset="./assets/images/about/about-section/2.webp 1x, ./assets/images/about/about-section/2-2x.webp 2x"
-              width="495"
-              height="775"
-              loading="lazy"
-              alt=""
-            />
+            <div
+              class="about-section__image-slider slider-about"
+              data-js-slider='{
+                "sliderParams": {
+                  "spaceBetween": 10,
+                  "slidesPerGroup": 1,
+                  "slidesPerView": "auto"
+                }
+               }'
+            >
+              <div class="slider-about__swiper swiper" data-js-slider-swiper>
+                <ul class="slider-about__list swiper-wrapper">
+                  <li class="slider-about__list-item swiper-slide">
+                    <img
+                      class="about-section__image"
+                      srcset="./assets/images/about/about-section/1.webp 1x, /assets/images/about/about-section/1-2x.webp 2x"
+                      width="495"
+                      height="775"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-about__list-item swiper-slide">
+                    <img
+                      class="about-section__image"
+                      srcset="./assets/images/about/about-section/2.webp 1x, /assets/images/about/about-section/2-2x.webp 2x"
+                      width="495"
+                      height="775"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="about-section__wrapper">
@@ -390,7 +411,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/1.webp 1x, ./assets/images/catalog/1-2x.webp 2x"
+                      srcset="./assets/images/catalog/1.webp 1x, /assets/images/catalog/1-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -406,7 +427,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/2.webp 1x, ./assets/images/catalog/2-2x.webp 2x"
+                      srcset="./assets/images/catalog/2.webp 1x, /assets/images/catalog/2-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -422,7 +443,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/3.webp 1x, ./assets/images/catalog/3-2x.webp 2x"
+                      srcset="./assets/images/catalog/3.webp 1x, /assets/images/catalog/3-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -438,7 +459,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/4.webp 1x, ./assets/images/catalog/4-2x.webp 2x"
+                      srcset="./assets/images/catalog/4.webp 1x, /assets/images/catalog/4-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -455,7 +476,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/1.webp 1x, ./assets/images/catalog/1-2x.webp 2x"
+                      srcset="./assets/images/catalog/1.webp 1x, /assets/images/catalog/1-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -471,7 +492,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/2.webp 1x, ./assets/images/catalog/2-2x.webp 2x"
+                      srcset="./assets/images/catalog/2.webp 1x, /assets/images/catalog/2-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -487,7 +508,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/3.webp 1x, ./assets/images/catalog/3-2x.webp 2x"
+                      srcset="./assets/images/catalog/3.webp 1x, /assets/images/catalog/3-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -503,7 +524,7 @@
                     <a class="slider-products__slide-link" href="#"></a>
                     <img
                       class="slider-products__slide-image"
-                      srcset="./assets/images/catalog/4.webp 1x, ./assets/images/catalog/4-2x.webp 2x"
+                      srcset="./assets/images/catalog/4.webp 1x, /assets/images/catalog/4-2x.webp 2x"
                       width="199"
                       height="212"
                       alt=""
@@ -549,18 +570,24 @@
           <div class="about__article border-decor" role="article">
             <a class="about__article-link" href="#"></a>
             <h3 class="about__article-title h3">Производство</h3>
-            <div data-js-video-wrapper>
-              <video
+            <div class="about__article-video-wrapper">
+              <img
                 class="about__article-video"
-                src="./assets/videos/production/1.mp4"
                 width="507"
                 height="285"
-                poster="./assets/videos/poster/1.webp"
-                controls
-                data-js-video
-              >
-              <button data-js-video-play-button>play</button>
-            </video>
+                src="./assets/videos/poster/1.webp"
+                loading="lazy"
+              />
+              <button class="about__article-video-play-button">
+                <img
+                  class="about__video-play-icon"
+                  src="./assets/icons/play-button.svg"
+                  width="115"
+                  height="115"
+                  alt=""
+                  loading="lazy"
+                />
+              </button>
             </div>
             <div class="about__article-description">
               <p>
@@ -668,7 +695,12 @@
         </div>
       </div>
     </footer>
-    <dialog class="feedback" aria-labelledby="dialog-title" data-js-dialog>
+    <dialog
+      class="feedback"
+      aria-labelledby="dialog-title"
+      data-js-dialog
+      id="dialog-feedback"
+    >
       <h3 class="visually-hidden" id="dialog-title">
         Форма для отправки запроса
       </h3>

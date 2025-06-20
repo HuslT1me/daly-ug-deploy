@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Дали Юг | Каталог</title>
-    <script type="module" crossorigin src="./assets/main-wLRjV_5v.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-CSbIOUce.css">
+    <script type="module" crossorigin src="./assets/main-7DMWXWEc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-B3OzgFJf.css">
   </head>
   <body>
     <header class="header container">
@@ -53,6 +53,7 @@
               aria-controls="myModal"
               aria-expanded="false"
               aria-label="Открыть форму обратной связи"
+              data-dialog-id="dialog-feedback"
               data-js-dialog-trigger
             >
               отправить запрос
@@ -65,7 +66,8 @@
               aria-controls="myModal"
               aria-expanded="false"
               aria-label="Открыть бургер меню"
-              data-js-dialog-trigger-burger
+              data-js-dialog-trigger
+              data-dialog-id="dialog-burger"
             >
               <div class="burger-menu__button-inner">
                 <span
@@ -78,7 +80,7 @@
                 </span>
               </div>
             </button>
-            <dialog class="burger-menu__content" data-js-dialog-burger>
+            <dialog class="burger-menu__content" id="dialog-burger">
               <ul class="burger-menu__content-list">
                 <li class="burger-menu__dropdown">
                   <details class="burger-menu__details">
@@ -288,7 +290,7 @@
                     <summary class="catalog__dropdown-summary">
                       <img
                         class="catalog__dropdown-image"
-                        srcset="./assets/images/catalog/type/1.webp 1x, ./assets/images/catalog/type/1-2x.webp 2x"
+                        srcset="./assets/images/catalog/type/1.webp 1x, /assets/images/catalog/type/1-2x.webp 2x"
                         width="47"
                         height="50"
                         alt=""
@@ -338,7 +340,7 @@
                     <summary class="catalog__dropdown-summary">
                       <img
                         class="catalog__dropdown-image"
-                        srcset="./assets/images/catalog/type/2.webp 1x, ./assets/images/catalog/type/2-2x.webp 2x"
+                        srcset="./assets/images/catalog/type/2.webp 1x, /assets/images/catalog/type/2-2x.webp 2x"
                         width="47"
                         height="50"
                         alt=""
@@ -390,7 +392,7 @@
                     <summary class="catalog__dropdown-summary">
                       <img
                         class="catalog__dropdown-image"
-                        srcset="./assets/images/catalog/type/3.webp 1x, ./assets/images/catalog/type/3-2x.webp 2x"
+                        srcset="./assets/images/catalog/type/3.webp 1x, /assets/images/catalog/type/3-2x.webp 2x"
                         width="47"
                         height="50"
                         alt=""
@@ -442,7 +444,7 @@
                     <summary class="catalog__dropdown-summary">
                       <img
                         class="catalog__dropdown-image"
-                        srcset="./assets/images/catalog/type/4.webp 1x, ./assets/images/catalog/type/4-2x.webp 2x"
+                        srcset="./assets/images/catalog/type/4.webp 1x, /assets/images/catalog/type/4-2x.webp 2x"
                         width="47"
                         height="50"
                         alt=""
@@ -494,7 +496,7 @@
                     <summary class="catalog__dropdown-summary">
                       <img
                         class="catalog__dropdown-image"
-                        srcset="./assets/images/catalog/type/5.webp 1x, ./assets/images/catalog/type/5-2x.webp 2x"
+                        srcset="./assets/images/catalog/type/5.webp 1x, /assets/images/catalog/type/5-2x.webp 2x"
                         width="47"
                         height="50"
                         alt=""
@@ -541,7 +543,7 @@
                 </div>
               </li>
             </ul>
-            <dialog class="catalog__filters" data-js-filter>
+            <dialog class="catalog__filters" id="dialog-filter">
               <header class="catalog__filters-header">
                 <span class="catalog__filters-title">
                   <svg class="icon icon--params" width="18" height="11">
@@ -549,7 +551,7 @@
                   </svg>
                   фильтры
                 </span>
-                <button class="catalog__filters-close" data-js-filter-close>
+                <button class="catalog__filters-close" data-js-dialog-close>
                   <svg class="icon icon--cross" width="20" height="20">
                     <use href="./assets/icons/sprite.svg#cross"></use>
                   </svg>
@@ -640,7 +642,11 @@
                 </div>
               </div>
             </dialog>
-            <button class="catalog__button-open-filters" data-js-button-filter>
+            <button
+              class="catalog__button-open-filters"
+              data-js-dialog-trigger
+              data-dialog-id="dialog-filter"
+            >
               <span class="catalog__filters-title">
                 <svg class="icon icon--params" width="18" height="11">
                   <use href="./assets/icons/sprite.svg#params"></use>
@@ -654,7 +660,7 @@
               <div class="product__inner">
                 <img
                   class="product__cover"
-                  srcset="./assets/images/catalog/products/1.webp 1x, ./assets/images/catalog/products/1-2x.webp 2x"
+                  srcset="./assets/images/catalog/products/1.webp 1x, /assets/images/catalog/products/1-2x.webp 2x"
                   width="257"
                   height="257"
                   alt=""
@@ -681,7 +687,7 @@
               <div class="product__inner">
                 <img
                   class="product__cover"
-                  srcset="./assets/images/catalog/products/2.webp 1x, ./assets/images/catalog/products/2-2x.webp 2x"
+                  srcset="./assets/images/catalog/products/2.webp 1x, /assets/images/catalog/products/2-2x.webp 2x"
                   width="257"
                   height="257"
                   alt=""
@@ -708,7 +714,7 @@
               <div class="product__inner">
                 <img
                   class="product__cover"
-                  srcset="./assets/images/catalog/products/3.webp 1x, ./assets/images/catalog/products/3-2x.webp 2x"
+                  srcset="./assets/images/catalog/products/3.webp 1x, /assets/images/catalog/products/3-2x.webp 2x"
                   width="257"
                   height="257"
                   alt=""
@@ -735,7 +741,7 @@
               <div class="product__inner">
                 <img
                   class="product__cover"
-                  srcset="./assets/images/catalog/products/1.webp 1x, ./assets/images/catalog/products/1-2x.webp 2x"
+                  srcset="./assets/images/catalog/products/1.webp 1x, /assets/images/catalog/products/1-2x.webp 2x"
                   width="257"
                   height="257"
                   alt=""
@@ -762,7 +768,7 @@
               <div class="product__inner">
                 <img
                   class="product__cover"
-                  srcset="./assets/images/catalog/products/2.webp 1x, ./assets/images/catalog/products/2-2x.webp 2x"
+                  srcset="./assets/images/catalog/products/2.webp 1x, /assets/images/catalog/products/2-2x.webp 2x"
                   width="257"
                   height="257"
                   alt=""
@@ -789,7 +795,7 @@
               <div class="product__inner">
                 <img
                   class="product__cover"
-                  srcset="./assets/images/catalog/products/3.webp 1x, ./assets/images/catalog/products/3-2x.webp 2x"
+                  srcset="./assets/images/catalog/products/3.webp 1x, /assets/images/catalog/products/3-2x.webp 2x"
                   width="257"
                   height="257"
                   alt=""
@@ -849,7 +855,7 @@
                   <a class="novelty-product__link" href="#"></a>
                   <img
                     class="novelty-product__cover"
-                    srcset="./assets/images/novelty/1.webp 1x, ./assets/images/novelty/1-2x.webp 2x"
+                    srcset="./assets/images/novelty/1.webp 1x, /assets/images/novelty/1-2x.webp 2x"
                     width="283"
                     height="240"
                     alt=""
@@ -868,7 +874,7 @@
                   <a class="novelty-product__link" href="#"></a>
                   <img
                     class="novelty-product__cover"
-                    srcset="./assets/images/novelty/2.webp 1x, ./assets/images/novelty/2-2x.webp 2x"
+                    srcset="./assets/images/novelty/2.webp 1x, /assets/images/novelty/2-2x.webp 2x"
                     width="283"
                     height="240"
                     alt=""
@@ -887,7 +893,7 @@
                   <a class="novelty-product__link" href="#"></a>
                   <img
                     class="novelty-product__cover"
-                    srcset="./assets/images/novelty/3.webp 1x, ./assets/images/novelty/3-2x.webp 2x"
+                    srcset="./assets/images/novelty/3.webp 1x, /assets/images/novelty/3-2x.webp 2x"
                     width="283"
                     height="240"
                     alt=""
@@ -906,7 +912,7 @@
                   <a class="novelty-product__link" href="#"></a>
                   <img
                     class="novelty-product__cover"
-                    srcset="./assets/images/novelty/4.webp 1x, ./assets/images/novelty/4-2x.webp 2x"
+                    srcset="./assets/images/novelty/4.webp 1x, /assets/images/novelty/4-2x.webp 2x"
                     width="283"
                     height="240"
                     alt=""
@@ -978,7 +984,12 @@
         </div>
       </div>
     </footer>
-    <dialog class="feedback" aria-labelledby="dialog-title" data-js-dialog>
+    <dialog
+      class="feedback"
+      aria-labelledby="dialog-title"
+      data-js-dialog
+      id="dialog-feedback"
+    >
       <h3 class="visually-hidden" id="dialog-title">
         Форма для отправки запроса
       </h3>

@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru-RU">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Дали Юг | О компании</title>
-    <script type="module" crossorigin src="./assets/main-wLRjV_5v.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-CSbIOUce.css">
+    <script type="module" crossorigin src="./assets/main-7DMWXWEc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-B3OzgFJf.css">
   </head>
   <body>
     <header class="header container">
@@ -53,6 +53,7 @@
               aria-controls="myModal"
               aria-expanded="false"
               aria-label="Открыть форму обратной связи"
+              data-dialog-id="dialog-feedback"
               data-js-dialog-trigger
             >
               отправить запрос
@@ -65,7 +66,8 @@
               aria-controls="myModal"
               aria-expanded="false"
               aria-label="Открыть бургер меню"
-              data-js-dialog-trigger-burger
+              data-js-dialog-trigger
+              data-dialog-id="dialog-burger"
             >
               <div class="burger-menu__button-inner">
                 <span
@@ -78,7 +80,7 @@
                 </span>
               </div>
             </button>
-            <dialog class="burger-menu__content" data-js-dialog-burger>
+            <dialog class="burger-menu__content" id="dialog-burger">
               <ul class="burger-menu__content-list">
                 <li class="burger-menu__dropdown">
                   <details class="burger-menu__details">
@@ -269,14 +271,29 @@
           <h1 class="production-factory__title section-title h3">
             Производство
           </h1>
-          <video
-            class="production-factory__video"
-            src="./assets/videos/production/1.mp4"
-            width="1230"
-            height="692"
-            poster="./assets/videos/poster/1.webp"
-            controls
-          ></video>
+          <div class="production-factory__video-wrapper" data-js-video-wrapper>
+            <video
+              class="production-factory__video"
+              src="./assets/videos/production/1.mp4"
+              width="1230"
+              height="692"
+              poster="./assets/videos/poster/1.webp"
+              data-js-video
+            ></video>
+            <button
+              class="production-factory__video-play-button"
+              data-js-video-play-button
+            >
+              <img
+                class="production-factory__video-play-icon"
+                src="./assets/icons/play-button.svg"
+                width="147"
+                height="147"
+                alt=""
+                loading="lazy"
+              />
+            </button>
+          </div>
         </div>
         <div class="production-factory__wrapper">
           <div class="production-factory__description">
@@ -318,24 +335,31 @@
         <h3 class="workshops__title h5 section-title">
           Производственные цеха «Дали-Юг»:
         </h3>
-        <div class="workshops__grid">
+        <div class="workshops__grid" data-js-tabs>
           <div class="workshops__inner">
             <ul class="workshops__list border-decor border-decor--sm">
               <li class="workshops__list-item">
-                <a class="workshops__list-item is-active" href="#">
+                <button
+                  class="workshops__list-item is-active"
+                  data-js-tabs-button
+                >
                   Цех литья и сборки
-                </a>
+                </button>
               </li>
               <li class="workshops__list-item">
-                <a class="workshops__list-item" href="#"> Цех волочения </a>
+                <button class="workshops__list-item" data-js-tabs-button>
+                  Цех волочения
+                </button>
               </li>
               <li class="workshops__list-item">
-                <a class="workshops__list-item" href="#"> Ткацкий цех </a>
+                <button class="workshops__list-item" data-js-tabs-button>
+                  Ткацкий цех
+                </button>
               </li>
               <li class="workshops__list-item">
-                <a class="workshops__list-item" href="#">
+                <button class="workshops__list-item" data-js-tabs-button>
                   Цех по производству салфетки из микрофибры
-                </a>
+                </button>
               </li>
             </ul>
             <div class="workshops__description">
@@ -354,40 +378,264 @@
               </span>
             </a>
           </div>
-          <div class="workshops__images">
-            <img
-              class="workshops__image"
-              srcset="./assets/images/factory/1.webp 1x, ./assets/images/factory/1-2x.webp 2x"
-              width="601"
-              height="460"
-              loading="lazy"
-              alt=""
-            />
-            <img
-              class="workshops__image"
-              srcset="./assets/images/factory/2.webp 1x, ./assets/images/factory/2-2x.webp 2x"
-              width="601"
-              height="460"
-              loading="lazy"
-              alt=""
-            />
-          </div>
-          <div class="workshops__info">
-            <div class="workshops__info-left">
-              <p class="workshops__info-left-title">Производство:</p>
-              <div class="workshops__info-left-list">
-                <p>Прищепки бельевые</p>
-                <p>Щетки хозяйственные</p>
+          <div class="workshops__tabs-content is-active" data-js-tabs-content>
+            <div
+              class="workshops__images slider-workshops"
+              data-js-slider='{"sliderParams": {
+                "slidesPerView": 2,
+                "spaceBetween": 10,
+                "slidesPerGroup": 1,
+                "breakpoints": {
+                  "0": {
+                    "slidesPerView": "auto",
+                    "spaceBetween": 10,
+                    "slidesPerGroup": 1
+                  },
+                  "600": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 10,
+                    "slidesPerGroup": 1
+                  }
+                }
+              }
+            }'
+            >
+              <div class="slider-workshops__inner swiper" data-js-slider-swiper>
+                <ul class="slider-workshops__list swiper-wrapper">
+                  <li class="slider-workshops__list-item swiper-slide">
+                    <img
+                      class="workshops__image"
+                      srcset="./assets/images/factory/1.webp 1x, /assets/images/factory/1-2x.webp 2x"
+                      width="601"
+                      height="460"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-workshops__list-item swiper-slide">
+                    <img
+                      class="workshops__image"
+                      srcset="./assets/images/factory/2.webp 1x, /assets/images/factory/2-2x.webp 2x"
+                      width="601"
+                      height="460"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="workshops__info-right">
-              <p>
-                На производственной линии литьевого цеха изготавливается три
-                вида прищепок и восемь видов хозяйственных щеток любых цветов.
-                Полный цикл включает все этапы производства: от отливки
-                продукции из пластика в пресс-формы на литьевых станках, её
-                сборке, до запаковки готовой продукции в различный вид упаковки.
-              </p>
+            <div class="workshops__info">
+              <div class="workshops__info-left">
+                <p class="workshops__info-left-title">Производство:</p>
+                <div class="workshops__info-left-list">
+                  <p>Прищепки бельевые</p>
+                  <p>Щетки хозяйственные</p>
+                </div>
+              </div>
+              <div class="workshops__info-right">
+                <p>
+                  На производственной линии литьевого цеха изготавливается три
+                  вида прищепок и восемь видов хозяйственных щеток любых цветов.
+                  Полный цикл включает все этапы производства: от отливки
+                  продукции из пластика в пресс-формы на литьевых станках, её
+                  сборке, до запаковки готовой продукции в различный вид
+                  упаковки.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="workshops__tabs-content" data-js-tabs-content>
+            <div
+              class="workshops__images slider-workshops"
+              data-js-slider='{"sliderParams": {
+                "slidesPerView": 2,
+                "spaceBetween": 10,
+                "slidesPerGroup": 1,
+                "breakpoints": {
+                  "0": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 10,
+                    "slidesPerGroup": 1
+                  },
+                  "600": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 10,
+                    "slidesPerGroup": 1
+                  }
+                }
+              }
+            }'
+            >
+              <div class="slider-workshops__inner swiper" data-js-slider-swiper>
+                <ul class="slider-workshops__list swiper-wrapper">
+                  <li class="slider-workshops__list-item swiper-slide">
+                    <img
+                      class="workshops__image"
+                      srcset="./assets/images/factory/1.webp 1x, /assets/images/factory/1-2x.webp 2x"
+                      width="601"
+                      height="460"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-workshops__list-item swiper-slide">
+                    <img
+                      class="workshops__image"
+                      srcset="./assets/images/factory/2.webp 1x, /assets/images/factory/2-2x.webp 2x"
+                      width="601"
+                      height="460"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="workshops__info">
+              <div class="workshops__info-left">
+                <p class="workshops__info-left-title">Производство2:</p>
+                <div class="workshops__info-left-list">
+                  <p>Прищепки</p>
+                  <p>Щетки</p>
+                </div>
+              </div>
+              <div class="workshops__info-right">
+                <p>
+                  На производственной линии литьевого цеха изготавливается три
+                  вида прищепок и восемь видов хозяйственных щеток любых цветов.
+                  Полный цикл включает все этапы производства: от отливки
+                  продукции из пластика в пресс-формы на литьевых станках, её
+                  сборке, до запаковки готовой продукции в различный вид
+                  упаковки.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="workshops__tabs-content" data-js-tabs-content>
+            <div
+              class="workshops__images slider-workshops"
+              data-js-slider='{"sliderParams": {
+                "slidesPerView": 2,
+                "spaceBetween": 10,
+                "slidesPerGroup": 1,
+                "breakpoints": {
+                  "0": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 10,
+                    "slidesPerGroup": 1
+                  },
+                  "600": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 10,
+                    "slidesPerGroup": 1
+                  }
+                }
+              }
+            }'
+            >
+              <div class="slider-workshops__inner swiper" data-js-slider-swiper>
+                <ul class="slider-workshops__list swiper-wrapper">
+                  <li class="slider-workshops__list-item swiper-slide">
+                    <img
+                      class="workshops__image"
+                      srcset="./assets/images/factory/1.webp 1x, /assets/images/factory/1-2x.webp 2x"
+                      width="601"
+                      height="460"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-workshops__list-item swiper-slide">
+                    <img
+                      class="workshops__image"
+                      srcset="./assets/images/factory/2.webp 1x, /assets/images/factory/2-2x.webp 2x"
+                      width="601"
+                      height="460"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="workshops__info">
+              <div class="workshops__info-left">
+                <p class="workshops__info-left-title">Производство3:</p>
+                <div class="workshops__info-left-list">
+                  <p>Прищепки бельевые</p>
+                  <p>Щетки хозяйственные</p>
+                </div>
+              </div>
+              <div class="workshops__info-right">
+                <p>
+                  На производственной линии литьевого цеха изготавливается три
+                  вида прищепок и восемь видов хозяйственных щеток любых цветов.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="workshops__tabs-content" data-js-tabs-content>
+            <div
+              class="workshops__images slider-workshops"
+              data-js-slider='{"sliderParams": {
+                "slidesPerView": 2,
+                "spaceBetween": 10,
+                "slidesPerGroup": 1,
+                "breakpoints": {
+                  "0": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 10,
+                    "slidesPerGroup": 1
+                  },
+                  "600": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 10,
+                    "slidesPerGroup": 1
+                  }
+                }
+              }
+            }'
+            >
+              <div class="slider-workshops__inner swiper" data-js-slider-swiper>
+                <ul class="slider-workshops__list swiper-wrapper">
+                  <li class="slider-workshops__list-item swiper-slide">
+                    <img
+                      class="workshops__image"
+                      srcset="./assets/images/factory/1.webp 1x, /assets/images/factory/1-2x.webp 2x"
+                      width="601"
+                      height="460"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-workshops__list-item swiper-slide">
+                    <img
+                      class="workshops__image"
+                      srcset="./assets/images/factory/2.webp 1x, /assets/images/factory/2-2x.webp 2x"
+                      width="601"
+                      height="460"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="workshops__info">
+              <div class="workshops__info-left">
+                <p class="workshops__info-left-title">Производство4:</p>
+                <div class="workshops__info-left-list">
+                  <p>Полотенца</p>
+                  <p>Щетки метталические</p>
+                </div>
+              </div>
+              <div class="workshops__info-right">
+                <p>
+                  На производственной линии литьевого цеха изготавливается три
+                  вида прищепок и восемь видов хозяйственных щеток любых цветов.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -445,7 +693,12 @@
         </div>
       </div>
     </footer>
-    <dialog class="feedback" aria-labelledby="dialog-title" data-js-dialog>
+    <dialog
+      class="feedback"
+      aria-labelledby="dialog-title"
+      data-js-dialog
+      id="dialog-feedback"
+    >
       <h3 class="visually-hidden" id="dialog-title">
         Форма для отправки запроса
       </h3>
