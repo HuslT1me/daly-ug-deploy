@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Дали Юг | Главная</title>
-    <script type="module" crossorigin src="./assets/main-7DMWXWEc.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-B3OzgFJf.css">
+    <script type="module" crossorigin src="./assets/main-grchCGJu.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-DW0fEsvU.css">
   </head>
   <body>
     <header class="header container">
@@ -266,7 +266,6 @@
       </div>
     </header>
     <main class="main">
-
       <section class="promo container" aria-labelledby="promo-title">
         <div class="promo__inner">
           <div class="promo__main">
@@ -550,6 +549,7 @@
                       "spaceBetween": 7
                     },
                     "481": {
+                      "initialSlide": 2,
                       "spaceBetween": 10
                     }
                   }
@@ -654,20 +654,25 @@
             <div class="about__article border-decor" role="article">
               <a class="about__article-link" href="#"></a>
               <h3 class="about__article-title h3">Производство</h3>
-              <div class="about__article-video-wrapper">
-                <img
+              <div class="about__article-video-wrapper" data-js-video-wrapper>
+                <video
                   class="about__article-video"
                   width="507"
                   height="285"
-                  src="./assets/videos/poster/1.webp"
+                  src="./assets/videos/production/1.mp4"
+                  poster="/assets/videos/poster/1.webp"
                   loading="lazy"
-                />
-                <button class="about__article-video-play-button">
+                  data-js-video
+                ></video>
+                <button
+                  class="about__article-video-play-button video-play-button"
+                  data-js-video-play-button
+                >
                   <img
                     class="about__video-play-icon"
                     src="./assets/icons/play-button.svg"
-                    width="115"
-                    height="115"
+                    width="116"
+                    height="116"
                     alt=""
                     loading="lazy"
                   />
