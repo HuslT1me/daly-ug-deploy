@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Дали Юг | Главная</title>
-<script type="module" crossorigin src="./assets/main-aRNgcP3a.js"></script>
+    <title>Дали Юг | О компании</title>
+    <script type="module" crossorigin src="./assets/main-aRNgcP3a.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/main-Co1Z05pf.css">
   </head>
   <body>
@@ -25,8 +25,38 @@
         <div class="header__content">
           <nav class="header__navigation navigation">
             <ul class="navigation__list">
-              <li class="navigation__list-item">
-                <a class="navigation__list-link" href="#">о компании</a>
+              <li class="navigation__list-item navigation__list-item--about">
+                <button
+                  class="navigation__list-button"
+                >
+                  о компании
+                </button>
+                <div class="navigation__about-dialog">
+                  <ul
+                    class="navigation__about-list border-decor border-decor--sm"
+                  >
+                    <li class="navigation__about-list-item">
+                      <a class="navigation__about-list-link" href="#">
+                        о нас
+                      </a>
+                    </li>
+                    <li class="navigation__about-list-item">
+                      <a class="navigation__about-list-link" href="#">
+                        производство
+                      </a>
+                    </li>
+                    <li class="navigation__about-list-item">
+                      <a class="navigation__about-list-link" href="#">
+                        карьера
+                      </a>
+                    </li>
+                    <li class="navigation__about-list-item">
+                      <a class="navigation__about-list-link" href="#">
+                        новости
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="navigation__list-item">
                 <a class="navigation__list-link" href="#">каталог</a>
@@ -266,44 +296,152 @@
       </div>
     </header>
     <main class="main">
-      <section class="promo container" aria-labelledby="promo-title">
-        <div class="promo__inner">
-          <div class="promo__main">
-            <a class="promo__link" href="#"></a>
-            <div class="promo__main-info">
-              <h1 class="promo__title h1" id="promo-title">
-                Изделия <br />
-                для кухни
-              </h1>
-              <span class="promo__subtitle">
-                Забота о любимых начинается с порядка и чистоты в доме
-              </span>
-              <span class="promo__learn-more learn-more">
-                узнать больше
-                <svg class="icon icon--arrow-right" width="58" height="8">
-                  <use href="./assets/icons/sprite.svg#arrow-right"></use>
-                </svg>
-              </span>
-            </div>
-            <div class="promo__mobile-cover">
-              <img
-                class="promo__mobile-cover-image"
-                srcset="./assets/images/promo/main-mobile.webp 1x, ./assets/images/promo/main-mobile-2x.webp 2x"
-                width="350"
-                height="411"
-                alt=""
-              />
+      <section class="about-section container">
+        <div class="about-section__inner">
+          <div class="about-section__content">
+            <h1 class="about-section__title section-title h3">О компании</h1>
+            <div class="about-section__decription">
+              <p>
+                Торгово-производственная компания «Дали-Юг» зарекомендовала себя
+                как надежный поставщик и производитель хозяйственных товаров
+                народного потребления.
+              </p>
+              <p>
+                «Дали-Юг» начала свою деятельность в 2002 году с импорта
+                хозяйственных щеток. За это время нами накоплен неоценимый опыт
+                продаж большого ассортимента товаров народного потребления
+                non-food, собрана профессиональная команда сотрудников, отлажены
+                собственные линии производства, организован свой автопарк и
+                складской комплекс. Сегодня «Дали-Юг» - значимый игрок
+                российского рынка товаров household.
+              </p>
+              <p>
+                Центральный офис и производственные мощности компании находятся
+                в г.Ростов-на-Дону.
+              </p>
             </div>
           </div>
-          <div class="promo__additional">
-            <a class="promo__link" href="#"></a>
-            <h2 class="promo__additional-title h2">Новинки весны</h2>
-            <span class="promo__learn-more learn-more">
-              узнать больше
-              <svg class="icon icon--arrow-right" width="58" height="8">
-                <use href="./assets/icons/sprite.svg#arrow-right"></use>
-              </svg>
-            </span>
+          <div class="about-section__images">
+            <div
+              class="about-section__image-slider slider-about"
+              data-js-slider='{
+                "sliderParams": {
+                  "slidesPerView": 3,
+                  "loop": true,
+                  "spaceBetween": 10,
+                  "breakpoints": {
+                    "0": {
+                      "slidesPerView": 1,
+                      "autoHeight": true
+                    },
+                    "1024":{
+                      "slidesPerGroup": 1,
+                      "slidesPerView": 3,
+                      "spaceBetween": 10
+                    }
+                  }
+                }
+               }'
+            >
+              <div class="slider-about__swiper swiper" data-js-slider-swiper>
+                <ul class="slider-about__list swiper-wrapper">
+                  <li class="slider-about__list-item swiper-slide">
+                    <img
+                      class="about-section__image"
+                      srcset="./assets/images/about/about-section/1.webp 1x, ./assets/images/about/about-section/1-2x.webp 2x"
+                      width="495"
+                      height="775"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-about__list-item swiper-slide">
+                    <img
+                      class="about-section__image"
+                      srcset="./assets/images/about/about-section/2.webp 1x, ./assets/images/about/about-section/2-2x.webp 2x"
+                      width="495"
+                      height="775"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-about__list-item swiper-slide">
+                    <img
+                      class="about-section__image"
+                      srcset="./assets/images/about/about-section/1.webp 1x, ./assets/images/about/about-section/1-2x.webp 2x"
+                      width="495"
+                      height="775"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-about__list-item swiper-slide">
+                    <img
+                      class="about-section__image"
+                      srcset="./assets/images/about/about-section/2.webp 1x, ./assets/images/about/about-section/2-2x.webp 2x"
+                      width="495"
+                      height="775"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-about__list-item swiper-slide">
+                    <img
+                      class="about-section__image"
+                      srcset="./assets/images/about/about-section/1.webp 1x, ./assets/images/about/about-section/1-2x.webp 2x"
+                      width="495"
+                      height="775"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-about__list-item swiper-slide">
+                    <img
+                      class="about-section__image"
+                      srcset="./assets/images/about/about-section/2.webp 1x, ./assets/images/about/about-section/2-2x.webp 2x"
+                      width="495"
+                      height="775"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-section__wrapper">
+          <div class="about-section__wrapper-header">
+            <div class="about-section__titles">
+              <p class="about-section__titles-title section-title">
+                20 лет присутствия на рынке
+              </p>
+              <p class="about-section__titles-title section-title">
+                Штат сотрудников > 150 человек
+              </p>
+              <p class="about-section__titles-title section-title">
+                Ассортимент > 200 SKU
+              </p>
+            </div>
+            <div class="about-section__benefits benefits">
+              <p class="benefits__item">
+                Выгодное ценообразование с гибкой системой скидок
+              </p>
+              <p class="benefits__item">
+                Свой распределительный центр для отгрузки
+              </p>
+              <p class="benefits__item">
+                Собственный автопарк для быстрой доставки
+              </p>
+            </div>
+          </div>
+          <div class="about-section__wrapper-body">
+            <p>
+              Продукция «Дали-Юг» поставляется во все регионы России и страны
+              СНГ. Отгрузка осуществляется с распределительного центра
+              «Дали-Юг». Собственный парк автомобилей и логистическая служба
+              делают недорогую и быструю доставку заказанных товаров.
+            </p>
           </div>
         </div>
       </section>
@@ -316,7 +454,7 @@
             class="catalog-production__title section-title h5"
             id="catalog-production-title"
           >
-            Каталог продукции
+            Продуктовый портфель компании
           </h3>
           <div
             class="catalog-production__slider slider-products"
@@ -507,112 +645,41 @@
           </div>
         </div>
       </section>
-
-      <section class="adversting" aria-labelledby="advertising-title">
-        <h3 class="visually-hidden">
-          Информация о взаимодействии с партнерами и сотрудничестве
-        </h3>
-        <div class="container">
-          <div class="adversting__information">
-            <a class="adversting__information-link" href="#"></a>
-            <h4 class="adversting__information-title h3">СТМ-производство</h4>
-            <div class="adversting__information-description">
-              <p>
-                Важной частью производственной стратегии компании является
-                выпуск и отгрузка продукции под маркой клиента.
-              </p>
-              <p>
-                Партнёры могут выбирать тираж, параметры и цветовую гамму
-                товара. Команда «Дали-Юг» поможет согласовать спецификации,
-                подобрать технологию, разработать упаковку и обеспечить
-                своевременные поставки.
-              </p>
-            </div>
-            <span class="adversting___learn-more learn-more">
-              узнать больше
-              <svg class="icon icon--arrow-right" width="58" height="8">
-                <use href="./assets/icons/sprite.svg#arrow-right"></use>
-              </svg>
-            </span>
-          </div>
-        </div>
-        <div class="adversting__inner">
-          <div
-            class="adversting__image-slider slider-adversting"
-            data-js-slider='{
-                "sliderParams": {
-                  "spaceBetween": 10,
-                  "slidesPerGroup": 1,
-                  "slidesPerView": "auto",
-                   "breakpoints": {
-                    "0": {
-                      "spaceBetween": 7
-                    },
-                    "481": {
-                      "spaceBetween": 10
-                    }
-                  }
-                }
-               }'
-               data-slider-autoslide="2"
-          >
-            <div class="slider-adversting__swiper swiper" data-js-slider-swiper>
-              <ul class="slider-adversting__list swiper-wrapper">
-                <li class="slider-adversting__list-item swiper-slide">
-                  <img
-                    class="slider-adversting__image"
-                    srcset="./assets/images/adversting/1.webp 1x, ./assets/images/adversting/1-2x.webp 2x"
-                    width="723"
-                    height="650"
-                    alt=""
-                    loading="lazy"
-                  />
-                </li>
-                <li class="slider-adversting__list-item swiper-slide">
-                  <img
-                    class="slider-adversting__image"
-                    srcset="./assets/images/adversting/2.webp 1x, ./assets/images/adversting/2-2x.webp 2x"
-                    width="390"
-                    height="650"
-                    alt=""
-                    loading="lazy"
-                  />
-                </li>
-                <li class="slider-adversting__list-item swiper-slide">
-                  <img
-                    class="slider-adversting__image"
-                    srcset="./assets/images/adversting/3.webp 1x, ./assets/images/adversting/3-2x.webp 2x"
-                    width="755"
-                    height="650"
-                    alt=""
-                    loading="lazy"
-                  />
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="about" aria-labelledby="about-title">
+      <section class="about container" aria-labelledby="about-title">
         <h3 class="visually-hidden" id="about-title">Блог о нашей компанией</h3>
-        <header class="about__header">
-          <div
-            class="about__article about__article--main border-decor"
-            role="article"
-          >
+        <div class="about__body">
+          <div class="about__article border-decor" role="article">
             <a class="about__article-link" href="#"></a>
-            <h3 class="about__article-title h3">Партнерам</h3>
-            <div
-              class="about__article-description about__article-description--short"
-            >
+            <h3 class="about__article-title h3">Производство</h3>
+            <div class="about__article-video-wrapper" data-js-video-wrapper>
+              <video
+                class="about__article-video"
+                width="507"
+                height="285"
+                src="./assets/videos/production/1.mp4"
+                poster="./assets/videos/poster/1.webp"
+                loading="lazy"
+                data-js-video
+              ></video>
+              <button
+                class="about__article-video-play-button video-play-button"
+                data-js-video-play-button
+              >
+                <img
+                  class="about__video-play-icon"
+                  src="./assets/icons/play-button.svg"
+                  width="116"
+                  height="116"
+                  alt=""
+                  loading="lazy"
+                />
+              </button>
+            </div>
+            <div class="about__article-description">
               <p>
-                Рыночная стратегия «Дали-Юг» предлагает партнерам выгодные
-                условия сотрудничества: индивидуальную ценовую политику,
-                обеспечивающую стабильный доход, широкий ассортимент товаров
-                категории household, возможность производства продукции под
-                собственной маркой, оперативную доставку на склад партнера
-                собственным транспортом,
+                Производство «Дали-Юг» представлено следующими цехами: цех литья
+                и сборки, цех волочения, ткацкий цех, цех по производству
+                салфеток из микрофибры
               </p>
             </div>
             <span class="about__learn-more learn-more">
@@ -622,293 +689,42 @@
               </svg>
             </span>
           </div>
-          <div class="about__decor-block">
-            <img
-              class="about__truck"
-              srcset="./assets/images/about/truck.webp 1x, ./assets/images/about/truck-2x.webp 2x"
-              width="763"
-              height="398"
-              alt=""
-              loading="lazy"
-            />
-            <img
-              class="about__box"
-              srcset="./assets/images/about/box.webp 1x, ./assets/images/about/box-2x.webp 2x"
-              width="947"
-              height="559"
-              alt=""
-              loading="lazy"
-            />
-            <img
-              class="about__bg-cover"
-              srcset="./assets/images/about/mobile-bg.webp 1x, ./assets/images/about/mobile-bg-2x.webp 2x"
-              width="596"
-              height="351"
-              alt=""
-              loading="lazy"
-            />
-          </div>
-        </header>
-        <div class="container">
-          <div class="about__body">
-            <div class="about__article border-decor" role="article">
-              <a class="about__article-link" href="#"></a>
-              <h3 class="about__article-title h3">Производство</h3>
-              <div class="about__article-video-wrapper" data-js-video-wrapper>
-                <video
-                  class="about__article-video"
-                  width="507"
-                  height="285"
-                  src="./assets/videos/production/1.mp4"
-                  poster="./assets/videos/poster/1.webp"
-                  loading="lazy"
-                  data-js-video
-                ></video>
-                <button
-                  class="about__article-video-play-button video-play-button"
-                  data-js-video-play-button
-                >
-                  <img
-                    class="about__video-play-icon"
-                    src="./assets/icons/play-button.svg"
-                    width="116"
-                    height="116"
-                    alt=""
-                    loading="lazy"
-                  />
-                </button>
-              </div>
-              <div class="about__article-description">
-                <p>
-                  Производство «Дали-Юг» представлено следующими цехами: цех
-                  литья и сборки, цех волочения, ткацкий цех, цех по
-                  производству салфеток из микрофибры
-                </p>
-              </div>
-              <span class="about__learn-more learn-more">
-                узнать больше
-                <svg class="icon icon--arrow-right" width="58" height="8">
-                  <use href="./assets/icons/sprite.svg#arrow-right"></use>
-                </svg>
-              </span>
+          <div class="about__article border-decor" role="article">
+            <a class="about__article-link" href="#"></a>
+            <h3 class="about__article-title h3">Карьера</h3>
+            <div class="about__article-description">
+              <p>
+                Наша команда – это производственный и финансовый успех компании,
+                люди, отдающие свои знания, опыт, силы и стремление к достижению
+                общего результата. Мы ценим труд каждого.
+              </p>
             </div>
-            <div class="about__article border-decor" role="article">
-              <a class="about__article-link" href="#"></a>
-              <h3 class="about__article-title h3">Карьера</h3>
-              <div class="about__article-description">
-                <p>
-                  Наша команда – это производственный и финансовый успех
-                  компании, люди, отдающие свои знания, опыт, силы и стремление
-                  к достижению общего результата. Мы ценим труд каждого.
+            <ul class="about__work-list">
+              <li class="about__work-list-item">
+                <span class="about__item-title-wrapper">
+                  <h6 class="about__item-title">
+                    Оператор производственной линии
+                  </h6>
+                </span>
+                <p class="about__item-subtitle">
+                  от 70 000 до 80 000 ₽ за месяц, на руки
                 </p>
-              </div>
-              <ul class="about__work-list">
-                <li class="about__work-list-item">
-                  <span class="about__item-title-wrapper">
-                    <h6 class="about__item-title">
-                      Оператор производственной линии
-                    </h6>
-                  </span>
-                  <p class="about__item-subtitle">
-                    от 70 000 до 80 000 ₽ за месяц, на руки
-                  </p>
-                </li>
-                <li class="about__work-list-item">
-                  <span class="about__item-title-wrapper">
-                    <h6 class="about__item-title">
-                      Оператор конвейерной линии
-                    </h6>
-                  </span>
-                  <p class="about__item-subtitle">
-                    от 80 000 до 90 000 ₽ за месяц, на руки
-                  </p>
-                </li>
-              </ul>
-              <span class="about__learn-more learn-more">
-                узнать больше
-                <svg class="icon icon--arrow-right" width="58" height="8">
-                  <use href="./assets/icons/sprite.svg#arrow-right"></use>
-                </svg>
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="novelty container" aria-labelledby="novelty-title">
-        <h3 class="novelty__title section-title h5" id="novelty-title">
-          Новинки
-        </h3>
-        <div
-          class="novelty__slider slider-novelty"
-          data-js-slider='{
-            "sliderParams": {
-              "slidesPerView": 4,
-              "spaceBetween": 10,
-              "slidesPerGroup": 4,
-              "breakpoints": {
-                "0": {
-                  "spaceBetween": 20,
-                  "slidesPerView": 1,
-                  "slidesPerGroup": 1
-                },
-                "768": {
-                  "slidesPerView": 3
-                },
-                "1280": {
-                  "slidesPerView": 4
-                }
-              }
-            }
-          }'
-        >
-          <div class="slider-novelty__swiper swiper" data-js-slider-swiper>
-            <ul class="slider-novelty__list swiper-wrapper">
-              <li class="slider-novelty__list-item swiper-slide">
-                <article class="slider-novelty__product novelty-product">
-                  <a class="novelty-product__link" href="#"></a>
-                  <img
-                    class="novelty-product__cover"
-                    srcset="./assets/images/novelty/1.webp 1x, ./assets/images/novelty/1-2x.webp 2x"
-                    width="283"
-                    height="240"
-                    alt=""
-                    loading="lazy"
-                  />
-                  <h5 class="novelty-product__title">
-                    Мочалка для посуды металлическая, плетёная "АкваМаг"
-                  </h5>
-                  <span class="novelty-product__category"
-                    >мочалки для посуды металлические</span
-                  >
-                </article>
               </li>
-              <li class="slider-novelty__list-item swiper-slide">
-                <article class="slider-novelty__product novelty-product">
-                  <a class="novelty-product__link" href="#"></a>
-                  <img
-                    class="novelty-product__cover"
-                    srcset="./assets/images/novelty/2.webp 1x, ./assets/images/novelty/2-2x.webp 2x"
-                    width="283"
-                    height="240"
-                    alt=""
-                    loading="lazy"
-                  />
-                  <h5 class="novelty-product__title">
-                    Мочалка для тела Бантик  "АкваМаг"
-                  </h5>
-                  <span class="novelty-product__category"
-                    >изделия по уходу за телом</span
-                  >
-                </article>
-              </li>
-              <li class="slider-novelty__list-item swiper-slide">
-                <article class="slider-novelty__product novelty-product">
-                  <a class="novelty-product__link" href="#"></a>
-                  <img
-                    class="novelty-product__cover"
-                    srcset="./assets/images/novelty/3.webp 1x, ./assets/images/novelty/3-2x.webp 2x"
-                    width="283"
-                    height="240"
-                    alt=""
-                    loading="lazy"
-                  />
-                  <h5 class="novelty-product__title">
-                    Мочалка для посуды из меди,  плетеная "АкваМаг"
-                  </h5>
-                  <span class="novelty-product__category"
-                    >мочалки для посуды металлические</span
-                  >
-                </article>
-              </li>
-              <li class="slider-novelty__list-item swiper-slide">
-                <article class="slider-novelty__product novelty-product">
-                  <a class="novelty-product__link" href="#"></a>
-                  <img
-                    class="novelty-product__cover"
-                    srcset="./assets/images/novelty/4.webp 1x, ./assets/images/novelty/4-2x.webp 2x"
-                    width="283"
-                    height="240"
-                    alt=""
-                    loading="lazy"
-                  />
-                  <h5 class="novelty-product__title">
-                    Набор салфеток из микрофибры "АкваМаг"
-                  </h5>
-                  <span class="novelty-product__category"
-                    >салфетки<br />
-                    для уборки</span
-                  >
-                </article>
+              <li class="about__work-list-item">
+                <span class="about__item-title-wrapper">
+                  <h6 class="about__item-title">Оператор конвейерной линии</h6>
+                </span>
+                <p class="about__item-subtitle">
+                  от 80 000 до 90 000 ₽ за месяц, на руки
+                </p>
               </li>
             </ul>
-          </div>
-        </div>
-      </section>
-      <section class="news container" aria-labelledby="news-title">
-        <div class="news__inner">
-          <h3 class="news__title section-title h5" id="news-title">Новости</h3>
-          <div class="news__content">
-            <div class="news__main news-article">
-              <img
-                class="news-article__cover"
-                srcset="./assets/images/news/cover.webp 1x, ./assets/images/news/cover-2x.webp 2x"
-                width="599"
-                height="463"
-                alt=""
-                loading="lazy"
-              />
-              <a class="news-article__link" href="#"></a>
-              <div class="news-article__item">
-                <time class="news-article__date date" datetime="2025-01-10">
-                  10.01.2025
-                </time>
-                <h6>Расширение линейки продуктов для уборки дома</h6>
-              </div>
-            </div>
-            <div class="news__list-wrapper">
-              <ul class="news__list">
-                <li class="news__list-item">
-                  <a class="news__list-link" href="#">
-                    <time class="news__date date" datetime="2025-01-10">
-                      10.01.2025
-                    </time>
-                    <h6>Обновлены условия заказа по программе СТМ</h6>
-                  </a>
-                </li>
-                <li class="news__list-item">
-                  <a class="news__list-link" href="#">
-                    <time class="news__date date" datetime="2025-01-06">
-                      06.01.2025
-                    </time>
-                    <h6>Расширение линейки продуктов для мытья посуды</h6>
-                  </a>
-                </li>
-                <li class="news__list-item">
-                  <a class="news__list-link" href="#">
-                    <time class="news__date date" datetime="2025-01-10">
-                      10.01.2025
-                    </time>
-                    <h6>Обновлены условия заказа по программе СТМ</h6>
-                  </a>
-                </li>
-                <li class="news__list-item">
-                  <a class="news__list-link" href="#">
-                    <time class="news__date date" datetime="2025-01-06">
-                      06.01.2025
-                    </time>
-                    <h6>Расширение линейки продуктов для мытья посуды</h6>
-                  </a>
-                </li>
-              </ul>
-              <a class="news__all-news-link" href="#">
-                <span class="news__learn-more learn-more">
-                  все новости
-                  <svg class="icon icon--arrow-right" width="58" height="8">
-                    <use href="./assets/icons/sprite.svg#arrow-right"></use>
-                  </svg>
-                </span>
-              </a>
-            </div>
+            <span class="about__learn-more learn-more">
+              узнать больше
+              <svg class="icon icon--arrow-right" width="58" height="8">
+                <use href="./assets/icons/sprite.svg#arrow-right"></use>
+              </svg>
+            </span>
           </div>
         </div>
       </section>
@@ -1013,5 +829,6 @@
         </span>
       </div>
     </dialog>
+
   </body>
 </html>
