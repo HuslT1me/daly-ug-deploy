@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Дали Юг | О компании</title>
     <script type="module" crossorigin src="./assets/main-YINV8PaG.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-BRGuutmc.css">
+    <link rel="stylesheet" crossorigin href="./assets/main-BRGuutmc.css" />
   </head>
   <body>
     <header class="header container">
@@ -150,7 +150,7 @@
                   </div>
                 </li>
                 <li class="burger-menu__dropdown">
-                               <a class="burger-menu__link" href="#">СТМ производство</a>
+                  <a class="burger-menu__link" href="#">СТМ производство</a>
                 </li>
                 <li class="burger-menu__dropdown">
                   <details class="burger-menu__details">
@@ -346,11 +346,22 @@
           <div class="workshops__tabs-content is-active" data-js-tabs-content>
             <div
               class="workshops__images slider-workshops"
-              data-js-slider='{"sliderParams": {
-                "slidesPerView": "auto",
-                "spaceBetween": 10,
-                "slidesPerGroup": 1
-              }
+              data-js-slider='{
+                "sliderParams": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 10,
+                  "loop": true,
+                  "slidesPerGroup": 1,
+                    "breakpoints": {
+                      "0":{
+                      "slidesPerView": "auto"
+                      },
+                      "1023": {
+                      "slidesPerView": 2
+                      }
+                    }
+                },
+              "navigationElementId": "slider-workshops-1"
             }'
             >
               <div class="slider-workshops__inner swiper" data-js-slider-swiper>
@@ -358,7 +369,7 @@
                   <li class="slider-workshops__list-item swiper-slide">
                     <img
                       class="slider-workshops__image"
-                      srcset="./assets/images/factory/1.webp 1x, ./assets/images/factory/1-2x.webp 2x"
+                      src="./assets/images/factory/1.webp"
                       width="601"
                       height="460"
                       loading="lazy"
@@ -368,7 +379,17 @@
                   <li class="slider-workshops__list-item swiper-slide">
                     <img
                       class="slider-workshops__image"
-                      srcset="./assets/images/factory/2.webp 1x, ./assets/images/factory/2-2x.webp 2x"
+                      src="./assets/images/factory/2.webp"
+                      width="601"
+                      height="460"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-workshops__list-item swiper-slide">
+                    <img
+                      class="slider-workshops__image"
+                      src="http://dali.napokaz.biz/files/storage/ba/nt/bantiki4_1753736518.jpg"
                       width="601"
                       height="460"
                       loading="lazy"
@@ -376,6 +397,28 @@
                     />
                   </li>
                 </ul>
+              </div>
+              <div
+                class="slider-workshops__navigation"
+                data-js-slider-navigation
+                id="slider-workshops-1"
+              >
+                <button
+                  class="slider-workshops__button slider-workshops__button--next swiper-button-next"
+                  data-js-slider-next-button
+                >
+                  <svg class="icon icon--arrow-right-sm" width="25" height="9">
+                    <use href="./assets/icons/sprite.svg#arrow-right-sm"></use>
+                  </svg>
+                </button>
+                <button
+                  class="slider-workshops__button slider-workshops__button--prev swiper-button-prev"
+                  data-js-slider-previous-button
+                >
+                  <svg class="icon icon--arrow-right-sm" width="25" height="9">
+                    <use href="./assets/icons/sprite.svg#arrow-right-sm"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="workshops__info">
@@ -401,11 +444,22 @@
           <div class="workshops__tabs-content" data-js-tabs-content>
             <div
               class="workshops__images slider-workshops"
-              data-js-slider='{"sliderParams": {
-                "slidesPerView": "auto",
-                "spaceBetween": 10,
-                "slidesPerGroup": 1
-              }
+              data-js-slider='{
+                "sliderParams": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 10,
+                  "loop": true,
+                  "slidesPerGroup": 1,
+                    "breakpoints": {
+                      "0":{
+                      "slidesPerView": "auto"
+                      },
+                      "1023": {
+                      "slidesPerView": 2
+                      }
+                    }
+                },
+              "navigationElementId": "slider-workshops-2"
             }'
             >
               <div class="slider-workshops__inner swiper" data-js-slider-swiper>
@@ -413,7 +467,10 @@
                   <li class="slider-workshops__list-item swiper-slide">
                     <img
                       class="slider-workshops__image"
-                      srcset="./assets/images/factory/1.webp 1x, ./assets/images/factory/1-2x.webp 2x"
+                      srcset="
+                        assets/images/factory/1.webp    1x,
+                        assets/images/factory/1-2x.webp 2x
+                      "
                       width="601"
                       height="460"
                       loading="lazy"
@@ -423,7 +480,23 @@
                   <li class="slider-workshops__list-item swiper-slide">
                     <img
                       class="slider-workshops__image"
-                      srcset="./assets/images/factory/2.webp 1x, ./assets/images/factory/2-2x.webp 2x"
+                      srcset="
+                        assets/images/factory/2.webp    1x,
+                        assets/images/factory/2-2x.webp 2x
+                      "
+                      width="601"
+                      height="460"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-workshops__list-item swiper-slide">
+                    <img
+                      class="slider-workshops__image"
+                      srcset="
+                        assets/images/factory/1.webp    1x,
+                        assets/images/factory/1-2x.webp 2x
+                      "
                       width="601"
                       height="460"
                       loading="lazy"
@@ -431,6 +504,28 @@
                     />
                   </li>
                 </ul>
+              </div>
+              <div
+                class="slider-workshops__navigation"
+                data-js-slider-navigation
+                id="slider-workshops-2"
+              >
+                <button
+                  class="slider-workshops__button slider-workshops__button--next swiper-button-next"
+                  data-js-slider-next-button
+                >
+                  <svg class="icon icon--arrow-right-sm" width="25" height="9">
+                    <use href="./assets/icons/sprite.svg#arrow-right-sm"></use>
+                  </svg>
+                </button>
+                <button
+                  class="slider-workshops__button slider-workshops__button--prev swiper-button-prev"
+                  data-js-slider-previous-button
+                >
+                  <svg class="icon icon--arrow-right-sm" width="25" height="9">
+                    <use href="./assets/icons/sprite.svg#arrow-right-sm"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="workshops__info">
@@ -456,11 +551,22 @@
           <div class="workshops__tabs-content" data-js-tabs-content>
             <div
               class="workshops__images slider-workshops"
-              data-js-slider='{"sliderParams": {
-                "slidesPerView": "auto",
-                "spaceBetween": 10,
-                "slidesPerGroup": 1
-              }
+              data-js-slider='{
+                "sliderParams": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 10,
+                  "loop": true,
+                  "slidesPerGroup": 1,
+                    "breakpoints": {
+                      "0":{
+                      "slidesPerView": "auto"
+                      },
+                      "1023": {
+                      "slidesPerView": 2
+                      }
+                    }
+                },
+              "navigationElementId": "slider-workshops-3"
             }'
             >
               <div class="slider-workshops__inner swiper" data-js-slider-swiper>
@@ -468,7 +574,10 @@
                   <li class="slider-workshops__list-item swiper-slide">
                     <img
                       class="slider-workshops__image"
-                      srcset="./assets/images/factory/1.webp 1x, ./assets/images/factory/1-2x.webp 2x"
+                      srcset="
+                        assets/images/factory/1.webp    1x,
+                        assets/images/factory/1-2x.webp 2x
+                      "
                       width="601"
                       height="460"
                       loading="lazy"
@@ -478,7 +587,23 @@
                   <li class="slider-workshops__list-item swiper-slide">
                     <img
                       class="slider-workshops__image"
-                      srcset="./assets/images/factory/2.webp 1x, ./assets/images/factory/2-2x.webp 2x"
+                      srcset="
+                        assets/images/factory/2.webp    1x,
+                        assets/images/factory/2-2x.webp 2x
+                      "
+                      width="601"
+                      height="460"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-workshops__list-item swiper-slide">
+                    <img
+                      class="slider-workshops__image"
+                      srcset="
+                        assets/images/factory/1.webp    1x,
+                        assets/images/factory/1-2x.webp 2x
+                      "
                       width="601"
                       height="460"
                       loading="lazy"
@@ -486,6 +611,28 @@
                     />
                   </li>
                 </ul>
+              </div>
+              <div
+                class="slider-workshops__navigation"
+                data-js-slider-navigation
+                id="slider-workshops-3"
+              >
+                <button
+                  class="slider-workshops__button slider-workshops__button--next swiper-button-next"
+                  data-js-slider-next-button
+                >
+                  <svg class="icon icon--arrow-right-sm" width="25" height="9">
+                    <use href="./assets/icons/sprite.svg#arrow-right-sm"></use>
+                  </svg>
+                </button>
+                <button
+                  class="slider-workshops__button slider-workshops__button--prev swiper-button-prev"
+                  data-js-slider-previous-button
+                >
+                  <svg class="icon icon--arrow-right-sm" width="25" height="9">
+                    <use href="./assets/icons/sprite.svg#arrow-right-sm"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="workshops__info">
@@ -507,11 +654,22 @@
           <div class="workshops__tabs-content" data-js-tabs-content>
             <div
               class="workshops__images slider-workshops"
-              data-js-slider='{"sliderParams": {
-                "slidesPerView": "auto",
-                "spaceBetween": 10,
-                "slidesPerGroup": 1
-              }
+              data-js-slider='{
+                "sliderParams": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 10,
+                  "loop": true,
+                  "slidesPerGroup": 1,
+                    "breakpoints": {
+                      "0":{
+                      "slidesPerView": "auto"
+                      },
+                      "1023": {
+                      "slidesPerView": 2
+                      }
+                    }
+                },
+              "navigationElementId": "slider-workshops-4"
             }'
             >
               <div class="slider-workshops__inner swiper" data-js-slider-swiper>
@@ -519,7 +677,10 @@
                   <li class="slider-workshops__list-item swiper-slide">
                     <img
                       class="slider-workshops__image"
-                      srcset="./assets/images/factory/1.webp 1x, ./assets/images/factory/1-2x.webp 2x"
+                      srcset="
+                        assets/images/factory/1.webp    1x,
+                        assets/images/factory/1-2x.webp 2x
+                      "
                       width="601"
                       height="460"
                       loading="lazy"
@@ -529,7 +690,23 @@
                   <li class="slider-workshops__list-item swiper-slide">
                     <img
                       class="slider-workshops__image"
-                      srcset="./assets/images/factory/2.webp 1x, ./assets/images/factory/2-2x.webp 2x"
+                      srcset="
+                        assets/images/factory/2.webp    1x,
+                        assets/images/factory/2-2x.webp 2x
+                      "
+                      width="601"
+                      height="460"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slider-workshops__list-item swiper-slide">
+                    <img
+                      class="slider-workshops__image"
+                      srcset="
+                        assets/images/factory/1.webp    1x,
+                        assets/images/factory/1-2x.webp 2x
+                      "
                       width="601"
                       height="460"
                       loading="lazy"
@@ -537,6 +714,28 @@
                     />
                   </li>
                 </ul>
+              </div>
+              <div
+                class="slider-workshops__navigation"
+                data-js-slider-navigation
+                id="slider-workshops-4"
+              >
+                <button
+                  class="slider-workshops__button slider-workshops__button--next swiper-button-next"
+                  data-js-slider-next-button
+                >
+                  <svg class="icon icon--arrow-right-sm" width="25" height="9">
+                    <use href="./assets/icons/sprite.svg#arrow-right-sm"></use>
+                  </svg>
+                </button>
+                <button
+                  class="slider-workshops__button slider-workshops__button--prev swiper-button-prev"
+                  data-js-slider-previous-button
+                >
+                  <svg class="icon icon--arrow-right-sm" width="25" height="9">
+                    <use href="./assets/icons/sprite.svg#arrow-right-sm"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="workshops__info">
@@ -658,6 +857,5 @@
         </span>
       </div>
     </dialog>
-
   </body>
 </html>
